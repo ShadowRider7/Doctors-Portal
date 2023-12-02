@@ -18,7 +18,7 @@ import PrivateRoute from "../PrivateRoute/PrivateRoute";
 const router = createBrowserRouter([
     {
         path: '/',
-        element: <Main></Main>, 
+        element: <Main></Main>,
         errorElement: <DisplayError></DisplayError>,
         children: [
             {
@@ -63,7 +63,7 @@ const router = createBrowserRouter([
             {
                 path: '/dashboard/payment/:id',
                 element: <AdminRoute><Payment></Payment></AdminRoute>,
-                loader: ({params}) => fetch(`http://localhost:5000/bookings/${params.id}`)
+                loader: ({ params }) => fetch(`https://doctors-portal-server-module-77-gggrdlij1-shadowrider7.vercel.app/bookings/${params.id}`)
             },
         ]
     }
